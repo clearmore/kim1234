@@ -1,0 +1,39 @@
+.inner{
+    width: 1200px !important;
+    margin: 0 auto !important;    
+}
+
+#hd{
+    .inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a{
+        display: block;
+    }
+}
+#gnb{
+    display: flex;
+    li.depth1{ //메뉴리스트
+        position: relative;
+        &:hover{
+            .depth2{
+                display: block;
+            }
+        }
+        a.depth1a{ //대메뉴들
+            font-size: 1.5em;
+            padding: 15px;
+        }
+        .depth2{ //소메뉴봉지
+        display: none;        
+        position: absolute;
+        left: 0%;
+        top: 100%;
+        background: white;
+        border:1px solid #222;
+        min-width: 121px;
+        }
+    }
+}
